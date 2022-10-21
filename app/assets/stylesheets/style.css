@@ -1,0 +1,33 @@
+.header{
+    background: #EBECF0;
+    box-shadow:  5px 5px 20px #c8c9cc, 
+             -5px -5px 20px #ffffff;
+}
+
+.header__wrapper{
+    display: flex;
+    padding: 10px 30px;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav li{
+    list-style: none;
+}
+
+.contents{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.content_post{
+    margin: 50px 0;
+    padding: 20px 30px;
+    border-radius: 50px;
+    background: #EBECF0;
+    box-shadow:  5px 5px 20px #c8c9cc, 
+             -5px -5px 20px #ffffff;
+
+}
