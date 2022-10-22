@@ -2,6 +2,9 @@
     <% @words.each do |word|%>
         <div class="content_post">
             <%= word.word %>
+            <%= word.text %>
+            <%= word.name %>
+            <%= link_to '削除', "/word_path/#{word.id}", method: :delete %>
         </div>
     <% end %>
 </div>
