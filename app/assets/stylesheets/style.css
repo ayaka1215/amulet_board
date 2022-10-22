@@ -18,7 +18,7 @@
 }
 
 .contents{
-    max-width: 60%;
+    max-width: 50%;
     margin: 0 auto;
 }
 
@@ -30,6 +30,18 @@
     box-shadow:  5px 5px 20px #c8c9cc, 
              -5px -5px 20px #ffffff;
 
+}
+
+.content_post_word{
+  font-size: large;
+  background-color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.content_post_about{
+  font-size: 14px;
 }
 
 fieldset {
@@ -686,11 +698,10 @@ ul li {
   }
 }
 
-/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 body,
 html {
   height: 100%;
-  background-color: #eceff3;
+  background-color: #fff;
 }
 
 body {
@@ -715,6 +726,22 @@ body {
 a {
   text-decoration: none;
   color: #666;
+}
+
+.button_to{
+  display: inline;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  text-decoration: none;
+  color: #666;
+  letter-spacing: 0.15em;
 }
 
 a:hover {

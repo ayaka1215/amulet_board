@@ -1,9 +1,9 @@
 <div class="contents">
     <% @words.each do |word|%>
         <div class="content_post">
-            <%= word.word %>
-            <%= word.text %>
-            <%= word.name %>
+            <p class="content_post_word"><%= word.word %></p>
+            <p class="content_post_about"><%= word.text %></p>
+            <p class="content_post_author"><%= word.name %></p>
             <%= button_to '削除', word_path(word.id), method: :delete %>
             <%= link_to '編集', edit_word_path(word.id), method: :get %>
             <%= link_to '詳細', word_path(word.id), method: :get %>
