@@ -5,6 +5,7 @@
             <%= word.text %>
             <%= word.name %>
             <%= button_to '削除', word_path(word.id), method: :delete %>
+            <%= button_to '編集', edit_word_path(word.id), method: :get %>
         </div>
     <% end %>
 </div>

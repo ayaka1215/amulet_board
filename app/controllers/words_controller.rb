@@ -4,11 +4,21 @@ class WordsController < ApplicationController
    end 
 
    def new
-      @words = Word.new
+      @word = Word.new
    end
 
    def create
       Word.create(word_params) 
+      redirect_to words_path
+   end
+
+   def edit
+      @word = Word.find(params[:id])
+   end
+
+   def update
+      word =Word.find(params[:id])
+      word.update(word_params)
       redirect_to words_path
    end
 
