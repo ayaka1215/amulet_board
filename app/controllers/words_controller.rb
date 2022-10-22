@@ -9,11 +9,11 @@ class WordsController < ApplicationController
 
    def create
       Word.create(word_params) 
-      redirect_to root_path 
+      redirect_to words_path
    end
 
    private
    def word_params
-      params.require(:Word).permit(:name, :word, :text, :image)
+      params.require(:word).permit(:name, :word, :text, :image)
    end
 end
