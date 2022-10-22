@@ -1,0 +1,10 @@
+<div class="contents">
+        <div class="content_post">
+            <%= @word.word %>
+            <%= @word.text %>
+            <%= @word.name %>
+            <%= button_to '削除', word_path(@word.id), method: :delete %>
+            <%= link_to '編集', edit_word_path(@word.id), method: :get %>
+            <%= link_to 'トップ', words_path %>
+        </div>
+</div>
