@@ -1,0 +1,12 @@
+<div class="contents">
+    <div class="container">
+        <h2>投稿する</h2>
+        <%= form_with(model: @words, local: true) do |form| %>
+            <%= form.text_field :word, placeholder: "お守り言葉を入れてね" %>
+            <%= form.text_field :text, placeholder: "エピソードをおしえてね" %>
+            <%= form.text_field :name, placeholder: "名前を入力してね" %>
+            <%= form.text_field :image, placeholder: "画像を入れてね" %>
+            <div class="content_submit"><%= form.submit "SEND" %></div>
+        <% end %>
+    </div>
+</div>
