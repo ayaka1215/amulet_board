@@ -3,7 +3,11 @@ class ApplicationController < ActionController::Base
 
     def after_sign_in_path_for(resource)
         words_path
-      end
+    end
+
+    def after_sign_out_path_for(resource)
+        words_path
+    end
 
     private
     def configure_permitted_parameters
