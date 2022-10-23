@@ -65,3 +65,6 @@ group :development do
 end
 
 gem "pry-rails"
+
+# devise
+gem "devise"

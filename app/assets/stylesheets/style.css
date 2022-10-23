@@ -22,7 +22,7 @@
     margin: 0 auto;
 }
 
-.content_post{
+.content_post, .container{
     margin: 50px 0;
     padding: 20px 30px;
     border-radius: 50px;
@@ -1071,7 +1071,7 @@ input::placeholder{
     color: #ccc;
 }
 
-.content_submit{
+.content_submit, .actions{
     text-align: center;
 }
 

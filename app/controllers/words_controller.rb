@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+   before_action :move_to_index, except: [:index, :show]
    def index
       @words = Word.all
    end 
@@ -35,5 +36,12 @@ class WordsController < ApplicationController
    private
    def word_params
       params.require(:word).permit(:name, :word, :text, :image)
+   end
+
+   # 未ログイン時の場合、トップページへリダイレクト
+   def move_to_index
+      unless user_signed_in?
+         redirect_to action: :index
+      end
    end
 end
