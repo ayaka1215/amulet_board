@@ -1,7 +1,7 @@
 class WordsController < ApplicationController
    before_action :move_to_index, except: [:index, :show]
    def index
-      @words = Word.all
+      @words = Word.includes(:user)
    end 
 
    def new
@@ -35,7 +35,7 @@ class WordsController < ApplicationController
 
    private
    def word_params
-      params.require(:word).permit(:name, :word, :text, :image)
+      params.require(:word).permit(:word, :text, :image).merge(user_id: current_user.id)
    end
 
    # 未ログイン時の場合、トップページへリダイレクト

@@ -1,0 +1,9 @@
+<div class="contents">
+    <p><%= @nickname %>さんのお守り言葉</p>
+    <% @words.each do |word| %>
+      <div class="content_post">
+        <p class="content_post_word"><%= word.word %></p>
+        <p class="content_post_about"><%= word.text %></p>
+      </div>  
+    <% end %>
+</div>

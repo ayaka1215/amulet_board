@@ -3,7 +3,9 @@
         <div class="content_post">
             <p class="content_post_word"><%= word.word %></p>
             <p class="content_post_about"><%= word.text %></p>
-            <p class="content_post_author"><%= word.name %></p>
+            <a href="/users/<%= word.user.id %>">
+                <p class="content_post_author"><%= word.user.nickname %></p>
+            </a>
             <%= button_to '削除', word_path(word.id), method: :delete %>
             <%= link_to '編集', edit_word_path(word.id), method: :get %>
             <%= link_to '詳細', word_path(word.id), method: :get %>
